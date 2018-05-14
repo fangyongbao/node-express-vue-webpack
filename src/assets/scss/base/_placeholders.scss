@@ -1,0 +1,19 @@
+/**
+ * @des: placeholder
+ * @author maicon
+ * @date 2017-05-02
+ * @example @extend %bg-cover-center;
+ */
+
+%bg-cover-center {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+%bg-contain-center {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+

@@ -1,0 +1,21 @@
+/**
+ * @Des  	mixin
+ * @Author	Albert
+ * @Date	2017/04/20
+ */
+
+//placeholder样式
+@mixin placeholder {
+    ::-webkit-input-placeholder {
+        @content
+    }
+    :-moz-placeholder {
+        @content
+    }
+    ::-moz-placeholder {
+        @content
+    }
+    :-ms-input-placeholder {
+        @content
+    }
+}

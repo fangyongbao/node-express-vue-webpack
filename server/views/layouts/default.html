@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" xmlns="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" xmlns="">
+    <title>凯发体育</title>
+    <link rel="stylesheet" href="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}css{{else}}css2{{/equal}}/global.css?v={{config.VERSION}}" />
+    {{#if cssPath}}
+    {{#each cssPath}}
+    <link rel="stylesheet" href="{{config.STATIC_RUL}}{{#equal ../config.NODE_ENV 'dev'}}css{{else}}css2{{/equal}}/{{this}}.css?v={{../config.VERSION}}" />
+    {{/each}}
+    {{/if}}
+</head>
+
+<body>
+    <div class="right-toolbar">
+        <div><img src="{{config.STATIC_RUL}}img/icon/kefu.png" /></div>
+        <div><img src="{{config.STATIC_RUL}}img/icon/phone.png" /></div>
+        <div><img src="{{config.STATIC_RUL}}img/icon/download.png" /></div>
+        <div><img src="{{config.STATIC_RUL}}img/icon/ercode.png" /></div>
+        <div><img src="{{config.STATIC_RUL}}img/icon/gotop.png" /></div>
+    </div> 
+    <div class="wrap">
+        {{> public/loginByPhone}}
+        {{{body}}}
+    </div>
+    </script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/jquery.min.js"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/jquery.cookie.js"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/yzm.js"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/config.js?v={{config.VERSION}}"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/util.js?v={{config.VERSION}}"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/common.js?v={{config.VERSION}}"></script>
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/msg.js?v={{config.VERSION}}"></script>
+    <!--     <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/sbtech.js?v={{config.VERSION}}"></script> -->
+    {{#if jsPath}} {{#each jsPath}}
+    <script type="text/javascript" src="{{config.STATIC_RUL}}{{#equal ../config.NODE_ENV 'dev'}}js{{else}}js2{{/equal}}/{{this}}.js?v={{../config.VERSION}}"></script>
+    {{/each}} {{/if}}
+</body>
+
+</html>
